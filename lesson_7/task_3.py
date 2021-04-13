@@ -65,13 +65,13 @@ def gnome(data):
             data[i - 1], data[i] = data[i], data[i - 1]
             if i > 1:
                 i -= 1
-        return data[m]
+    return data[m]
 
 
 m = random.randint(1, 10)
 n = 2 * m + 1
 a = [random.randint(1, 10) for _ in range(n)]
 print(a)
-print(get_median(a))
-print(gnome(a))
-print(median(a))
+print(gnome(a[:]))
+print(get_median(a[:]))
+print(median(a[:]))
