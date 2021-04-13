@@ -57,7 +57,6 @@ def get_median(arr):
 
 
 def gnome(data):
-    half = len(data) // 2
     i, size = 1, len(data)
     while i < size:
         if data[i - 1] <= data[i]:
@@ -66,10 +65,11 @@ def gnome(data):
             data[i - 1], data[i] = data[i], data[i - 1]
             if i > 1:
                 i -= 1
-    return data[half]
+        return data[m]
 
 
-n = 2 * random.randint(1, 10) + 1
+m = random.randint(1, 10)
+n = 2 * m + 1
 a = [random.randint(1, 10) for _ in range(n)]
 print(a)
 print(get_median(a))
